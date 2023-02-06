@@ -1,0 +1,43 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-card class="mt20">
+                    <mat-card-header>
+                        <mat-card-title>
+                            Read Instructions Carefully!!
+                        </mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <h1>{{quiz.title}}</h1>
+                        <p>{{quiz.description}}</p>
+                        <hr>
+                        <h1>
+                            Instructions
+                        </h1>
+                        <ul>
+                            <li>This quiz is for practice.</li>
+                            <li>All questions are of MCQ types</li>
+                            <li>This quiz contains {{quiz.numberOfQuestions}} questions.</li>
+                            <li>Time for quiz will be {{quiz.numberOfQuestions *2}} Minutes</li>
+                            <li>Each questions carries {{quiz.maxMarks/quiz.numberOfQuestions}} Marks.</li>
+                        </ul>
+                        <hr>
+                        <ul>
+                            <li>Click Start Button to start the quiz.</li>
+                            <li> As soon as the equiz is started the timer will start and quiz will end at he end of
+                                timer</li>
+                            <li>You cannot resume the quiz once logged out.</li>
+                            <li>The reslt will be genarated at the end of the quiz in pdf form</li>
+                            <li>Each questions carries {{quiz.maxMarks/quiz.numberOfQuestions}} Marks.</li>
+                        </ul>
+                        <div class="container text-center">
+                            <button (click)="startQuiz()" mat-raised-button color="primary">Start Test</button>
+                        </div>
+                    </mat-card-content>
+
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
